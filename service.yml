@@ -7,7 +7,7 @@ spec:
     - name: applicationserver
       port: 8080
       targetPort: 8080
-      nodeport: 30009
+      nodePort: 30009
   selector:
     application: gol
   type: NodePort

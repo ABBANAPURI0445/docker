@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: service-example
+spec:
+  ports:
+    - name: applicationserver
+      port: 8080
+      targetPort: 8080
+      nodeport: 30009
+  selector:
+    application: gol
+  type: NodePort

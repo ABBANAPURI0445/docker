@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: test-deployment  ## name of deployment
+spec: 
+   replicas: 2
+   selector:
+     matchLabels:
+        application: gol
+   template: 
+    metadata: 
+       name: gameoflife    ## name of the pod
+       labels:
+         application: gol
+    spec:
+       containers:
+       - image: 114496249224.dkr.ecr.us-west-2.amazonaws.com/hope:latest  // pandu/gol:1.0
+         name: tomcatgol                   ## name of container
+         ports:
+         - containerPort: 8080
+           name: appport

@@ -14,8 +14,8 @@ spec:
          application: gol
     spec:
        containers:
-       - image: 114496249224.dkr.ecr.us-west-2.amazonaws.com/hope:latest  // pandu/gol:1.0
-         name: tomcatgol                   ## name of container
+       - image: 114496249224.dkr.ecr.us-west-2.amazonaws.com/hope:latest
+         name: tomcatgol                  
          ports:
          - containerPort: 8080
            name: appport
